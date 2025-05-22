@@ -1,18 +1,51 @@
 @font-face {
-    font-family: 'IntegralCF-Bold';
-    src: url('./fonts/IntegralCF-Bold.ttf') format('truetype'); /* Assurez-vous que le chemin est correct */
+  font-family: 'IntegralCF-Bold';
+  src: url('./fonts/IntegralCF-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'inter-light';
-    src: url('./fonts/Inter_18pt-Light.ttf') format('truetype'); /* Assurez-vous que le chemin est correct */
+  font-family: 'inter-light';
+  src: url('./fonts/Inter_18pt-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'inter-extralight';
-    src: url('./fonts/Inter_18pt-ExtraLight.ttf') format('truetype'); /* Assurez-vous que le chemin est correct */
+  font-family: 'inter-Medium';
+  src: url('./fonts/Inter_18pt-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
+@font-face {
+  font-family: 'inter-extralight';
+  src: url('./fonts/Inter_18pt-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'InstrumentSerif-Regular';
+  src: url('./fonts/InstrumentSerif-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'inter-regular';
+  src: url('./fonts/Inter_18pt-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 * {
     margin: 0;
@@ -22,70 +55,69 @@
 
 body {
     margin: 0;
-    background: #F1E8CA  }
+    background: #ffffff  }
   
   header {
-    font-family: 'inter-extralight', sans-serif;
+    font-family: 'inter-regular', sans-serif;
+    background: #101010;
   }
+
   
   .navbar {
-    mix-blend-mode: difference;
-    padding-top: 10px;
-    position: fixed;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-  }
-  
-  .nav-left, .nav-right {
-    display: flex;
+  width: 100%;
+  height: 100px;
+  background: #101010;
+  position: relative;
+}
+
+.nav-edges {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 80px;
+  position: relative; /* pour que les éléments gauche et droite restent flex */
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+  .nav-right {
     gap: 40px;
   }
   
-  .nav-left {
-    gap: 15px;
-    margin-left: 80px;
-  }
 
-  .nav-left {
-    margin-left: 80px;
-    display: flex;
-    align-items: center;
-  }
-
-  .star {
-    color: white;
-    font-size: 1.5em; 
-    margin-right: 0; 
-    cursor: pointer;
-    transition: transform 0.5s ease-in-out, width 0.5s ease-in-out;
-  }
-  
-  .star:hover {
-    transform: rotate(270deg); 
-    width: 24px;
-  }
-  
-  .nav-right {
-    margin-right: 80px;
-    margin-left: auto;
-  }
-  
   .navbar a {
-    color: white;
+    font-size: 20px;
     text-decoration: none;
+    color: #F1E8CA;
     position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .logo-nav img {
+    height: 40px;
   }
   
   .navbar a::after {
     content: '';
     position: absolute;
-    width: 0;
+    width: 0%;
     height: 1.5px;
-    background: white;
+    background: #F1E8CA;
     left: 0;
     bottom: -5px;
     transition: width 0.3s ease-in-out;
@@ -96,141 +128,22 @@ body {
   }
   
   .navbar a.sans-bar:hover::after {
-    width: 0%;
-  }
-
-  .menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .menu-toggle .bar {
-    height: 3px;
-    width: 25px;
-    background-color: white;
-    margin: 4px 0;
-    transition: 0.4s;
-    border-radius: 5px; 
-  }
-  
-  .mobile-menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #101010;
-    z-index: 90000;
-    text-align: center;
-    height: 100vh; 
-  }
-
-   .mobile-menu.active {
-    display: flex;
-    opacity: 1; 
-  }
-
-  .mobile-menu a {
-    top: 30vh;
-    position: relative;
-    font-family: 'inter-extralight', sans-serif;
-    padding: 40px;
-    color: white;
-    text-decoration: none;
-    font-size: 25px;
-    transition: font-size 0.2s ease-in-out;
-
-  }
- 
-  .mobile-menu a:hover{
-    font-family: 'inter-light', sans-serif;
-    font-size: 30px;
-  }
-
-  .menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    margin-right: 40px;
-
-  }
-  
-  .menu-toggle .bar {
-    height: 2px;
-    width: 25px;
-    background-color: white;
-    margin: 4px 0;
-    transition: 0.4s;
-    border-radius: 5px;
-  }
-
-
-  
-  .mobile-menu a:hover::after {
     width: 100%;
   }
-  
-  .menu-toggle.active .bar:nth-child(1) {
-    transform: rotate(45deg) translate(9px, 5px);
-    transform-origin: center;
 
-  }
-  
-  .menu-toggle.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .menu-toggle.active .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(9px, -5px);
-    transform-origin: center;
-  }
+.logo-nav::after {
+  display: none;
+}
+
+.logo-nav:hover::after {
+  display: none;
+}
 
 
-
-  .bg{
-    position: relative;
-    overflow: hidden; /* Cache tout contenu dépassant */
-    height: 100vh; 
-    background: url('img/blood_masque.png');
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-size: cover;
-    background-position: left ;
-  }
-
-  /*
-  @media (max-width: 768px) {
-    .nav-right {
-      display: none;
-    }
-  
-    .menu-toggle {
-      display: flex;
-    }
-  
-    .mobile-menu {
-      display: none;
-    }
-
-    .nav-left{
-        opacity: 0;    
-    }
-  }
-  */
-
-  @media (max-width: 768px) {
-    .name {
-      display: none;
-    }
-  }
-
-
-body.no-scroll {
-    overflow: hidden; /* Désactive le défilement */
-  }
   
 
+.hero {
+  background-color: #858585;
+  height: 80vh;
+}
   
