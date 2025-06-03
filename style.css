@@ -323,12 +323,35 @@ body {
 
 
 
+.burger-icon {
+  display: none;
+}
+
+
+
+
+
+
 
 
 @media (max-width: 1400px) {
-  .nav-left, .nav-right{
+  .nav-left, .dropdown, .account-button{
     display: none;
+    padding: 0;
+    margin: 0;  
+    }
+
+    .burger-icon {
+  display:block;
+}
+
+
+  .nav-right {
+    margin-right: 40px;
   }
+}
+
+
 
   .nav-center {
   position: relative;
@@ -339,7 +362,7 @@ body {
   left: 0;
   top: 0;
   transform: translate(0%, 0%);
-  margin-left: 80px;
+  margin-left: 40px;
 }
 
 .navbar{
@@ -349,7 +372,7 @@ body {
   .logo-nav img {
     height: 30px;
   }
-}
+
 
 
 .hero {
@@ -357,3 +380,5 @@ body {
   height: 10vh;
 }
   
+
+
