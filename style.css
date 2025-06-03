@@ -83,7 +83,6 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  padding: 0 80px;
   position: relative; /* pour que les éléments gauche et droite restent flex */
 }
 
@@ -104,7 +103,12 @@ body {
 
 
   .nav-right {
+    margin-right: 80px;
     gap: 40px;
+  }
+
+  .nav-left{
+    margin-left: 80px;
   }
   
 
@@ -321,7 +325,7 @@ body {
 
 
 
-/*@media (max-width: 1400px) {
+@media (max-width: 1400px) {
   .nav-left, .nav-right{
     display: none;
   }
@@ -329,13 +333,13 @@ body {
   .nav-center {
   position: relative;
   display: flex;
-  align-items: right;
-  gap: 40px;
-  justify-content: space-between;
+  align-items: left;
   align-items: center;
   height: 100%;
   left: 0;
-  margin-left: 40px ;
+  top: 0;
+  transform: translate(0%, 0%);
+  margin-left: 80px;
 }
 
 .navbar{
@@ -347,9 +351,9 @@ body {
   }
 }
 
-*/
+
 .hero {
   background-color: #858585;
-  height: 80vh;
+  height: 10vh;
 }
   
