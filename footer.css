@@ -28,7 +28,7 @@ hr {
   background-color: #F1E8CA;
 }
 
-.nav-footer1, .nav-footer2 {
+.nav-footer1, .nav-footer2, .social-media {
   margin-left: 80px;
   margin-right: 80px;
   padding: 40px 0px 40px 0px;
@@ -36,12 +36,22 @@ hr {
   gap: 40px;
 }
 
-.nav-footer1 a, .nav-footer2 a {
+
+.nav-footer1 a, .nav-footer2 a, .social-media a {
   position: relative;
   text-decoration: none;
   color: #F1E8CA;
   text-transform: uppercase;
   text-align: center;
+}
+
+.social-media a {
+  font-size: 28px;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #C1BAA2;
 }
 
 .nav-footer1 a::after, .nav-footer2 a::after {
