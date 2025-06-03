@@ -47,6 +47,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'vina-sans';
+  src: url('./fonts/VinaSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -190,8 +198,10 @@ body {
 
 .dropdown-menu {
   position: absolute;
-  top: 40px;
-  left: 22px; /* ou ajuste à l’œil si besoin */
+  background-color: #10101089;
+  border: none;
+  top: 60px;
+  left: 0px;
 }
 
 .dropdown-menu li {
@@ -201,8 +211,34 @@ body {
 .dropdown-menu li a {
   color: #F1E8CA;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
 }
+
+.dropdown-menu a:hover {
+  color: #F1E8CA;
+  text-decoration:underline;
+}
+
+.dropdown-menu a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 1.5px;
+  background: #F1E8CA;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease-in-out;
+}
+
+.dropdown-menu a:hover::after {
+  width: 100%;
+}
+
+.dropdown-menu a.sans-bar:hover::after {
+  width: 100%;
+}
+
+
 
 .dropdown:hover .dropdown-menu {
   display: flex;
@@ -211,15 +247,22 @@ body {
 
 .lang-button {
   position: relative;
-  overflow: visible; /* assure que le SVG peut dépasser */
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
+  padding: 20px 10px; /* augmente la zone cliquable */
   background: none;
   border: none;
-  cursor: pointer;
   color: #F1E8CA;
+  font-size: 20px;
+  font-family: 'inter-regular', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+
+  /* pour éviter que le background déborde avec padding */
+  background-clip: padding-box;
 }
+
+
 
 .lang-icon {
   overflow: visible; /* assure que les paths peuvent sortir du SVG */
