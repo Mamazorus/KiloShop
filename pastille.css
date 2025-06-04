@@ -1,79 +1,125 @@
 .pastille {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    border: 2px solid #101010;
-    border-left: none;
-    border-top: none;
-    width: 100%;
-    aspect-ratio: 1728 / 574;
-  }
-  
-  .grid-item {
-    position: relative;
-    border-left: 2px solid #101010;
-    border-top: 2px solid #101010;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .item1 {
-    background-color: #DF271C;
-  }
-  .item2 {
-    background-color: #05CC75;
-  }
-  .item3 {
-    background-color: #0059F7;
-  }
-  .item4 {
-    background-color: #F07508;
-  }
-  
-  .pastille-item:hover .hover-img,
-  .pastille-item.hover .hover-img {
-    transform: translateX(0);
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 2px solid #101010;
+  border-left: none;
+  border-top: none;
+  width: 100%;
+  aspect-ratio: 1728 / 574;
+}
 
-  .grid-item .icon {
-    position: relative;
-    width: 80px;
-    height: auto;
-    z-index: 0; /* Passe en dessous */
+.grid-item {
+  position: relative;
+  border-left: 2px solid #101010;
+  border-top: 2px solid #101010;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item1 {
+  background-color: #DF271C;
+}
+
+.item2 {
+  background-color: #05CC75;
+}
+
+.item3 {
+  background-color: #0059F7;
+}
+
+.item4 {
+  background-color: #F07508;
+}
+
+.pastille-item:hover .hover-img,
+.pastille-item.hover .hover-img {
+  transform: translateX(0);
+}
+
+
+.grid-item .icon {
+  position: relative;
+  width: 80px;
+  height: auto;
+  z-index: 0;
+  /* Passe en dessous */
+}
+
+.grid-item .hover-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  /* Passe au-dessus */
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+}
+
+
+.item1 .hover-img {
+  transform: translateX(-100%);
+  /* Case 1 → toujours depuis la gauche */
+}
+
+.item2 .hover-img {
+  transform: translateX(-100%);
+  /* Case 2 → desktop depuis la gauche */
+}
+
+.item3 .hover-img {
+  transform: translateX(100%);
+  /* Case 3 → desktop depuis la droite */
+}
+
+.item4 .hover-img {
+  transform: translateX(100%);
+  /* Case 4 → toujours depuis la droite */
+}
+
+/* 2. Animation au hover (desktop) */
+.item1:hover .hover-img,
+.item2:hover .hover-img,
+.item3:hover .hover-img,
+.item4:hover .hover-img {
+  transform: translateX(0);
+  transition: transform 0.4s ease;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .pastille {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    aspect-ratio: 432 / 574;
   }
-  
-  .grid-item .hover-img {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1; /* Passe au-dessus */
-    transform: translateX(100%);
-    transition: transform 0.4s ease;
-  }
-  
-  
+
   .item1 .hover-img {
-    transform: translateX(-100%); /* Case 1 → toujours depuis la gauche */
+    transform: translateX(-100%);
+    /* Case 1 → toujours depuis la gauche */
   }
-  
+
   .item2 .hover-img {
-    transform: translateX(-100%); /* Case 2 → desktop depuis la gauche */
+    transform: translateX(100%);
+    /* Case 2 → mobile depuis la droite */
   }
-  
+
   .item3 .hover-img {
-    transform: translateX(100%);  /* Case 3 → desktop depuis la droite */
+    transform: translateX(-100%);
+    /* Case 3 → mobile depuis la gauche */
   }
-  
+
   .item4 .hover-img {
-    transform: translateX(100%);  /* Case 4 → toujours depuis la droite */
+    transform: translateX(100%);
+    /* Case 4 → toujours depuis la droite */
   }
-  
-  /* 2. Animation au hover (desktop) */
+
+  /* Au hover, on ramène à 0 comme sur desktop */
   .item1:hover .hover-img,
   .item2:hover .hover-img,
   .item3:hover .hover-img,
@@ -81,35 +127,4 @@
     transform: translateX(0);
     transition: transform 0.4s ease;
   }
-  
-  /* Responsive */
-  @media (max-width: 1024px) {
-    .pastille {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      aspect-ratio: 432 / 574;
-    }
-  
-    .item1 .hover-img {
-        transform: translateX(-100%); /* Case 1 → toujours depuis la gauche */
-      }
-      .item2 .hover-img {
-        transform: translateX(100%);  /* Case 2 → mobile depuis la droite */
-      }
-      .item3 .hover-img {
-        transform: translateX(-100%); /* Case 3 → mobile depuis la gauche */
-      }
-      .item4 .hover-img {
-        transform: translateX(100%);  /* Case 4 → toujours depuis la droite */
-      }
-    
-      /* Au hover, on ramène à 0 comme sur desktop */
-      .item1:hover .hover-img,
-      .item2:hover .hover-img,
-      .item3:hover .hover-img,
-      .item4:hover .hover-img {
-        transform: translateX(0);
-        transition: transform 0.4s ease;
-      }
-  }
-  
+}

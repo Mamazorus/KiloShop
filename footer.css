@@ -1,17 +1,15 @@
-
-
 ::selection {
   background: #101010;
   color: #F1E8CA;
 }
 
-.footer{
+.footer {
   background-color: #101010;
   font-family: 'inter-regular', sans-serif;
   font-size: 20px;
 }
 
-.footer h3{
+.footer h3 {
   margin-right: 80px;
   display: flex;
   justify-content: flex-end;
@@ -28,7 +26,9 @@ hr {
   background-color: #F1E8CA;
 }
 
-.nav-footer1, .nav-footer2, .social-media {
+.nav-footer1,
+.nav-footer2,
+.social-media {
   margin-left: 80px;
   margin-right: 80px;
   padding: 40px 0px 40px 0px;
@@ -37,7 +37,9 @@ hr {
 }
 
 
-.nav-footer1 a, .nav-footer2 a, .social-media a {
+.nav-footer1 a,
+.nav-footer2 a,
+.social-media a {
   position: relative;
   text-decoration: none;
   color: #F1E8CA;
@@ -54,7 +56,8 @@ hr {
   color: #C1BAA2;
 }
 
-.nav-footer1 a::after, .nav-footer2 a::after {
+.nav-footer1 a::after,
+.nav-footer2 a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -65,14 +68,15 @@ hr {
   transition: width 0.3s ease;
 }
 
-.nav-footer1 a:hover::after, .nav-footer2 a:hover::after {
+.nav-footer1 a:hover::after,
+.nav-footer2 a:hover::after {
   width: 100%;
 }
 
 
 
-footer p{
-  color: #F1E8CA; 
+footer p {
+  color: #F1E8CA;
 }
 
 .footer-lastline {
@@ -81,7 +85,7 @@ footer p{
   font-size: 14px;
 }
 
-.mobile-nav-footer{
+.mobile-nav-footer {
   display: flex;
   flex-direction: column;
 }
@@ -98,7 +102,8 @@ footer p{
     justify-content: space-between;
   }
 
-  .nav-footer1, .nav-footer2 {
+  .nav-footer1,
+  .nav-footer2 {
     display: flex;
     flex-direction: column;
     font-size: 16px;
@@ -107,18 +112,20 @@ footer p{
 
   .nav-footer1 {
     margin-left: 40px;
-    align-items: flex-start; /* pour aligner les liens à droite si tu veux */
+    align-items: flex-start;
+    /* pour aligner les liens à droite si tu veux */
   }
 
   .nav-footer2 {
     margin-right: 40px;
-    align-items: flex-end; /* pour aligner les liens à droite si tu veux */
+    align-items: flex-end;
+    /* pour aligner les liens à droite si tu veux */
   }
 
   .nav-footer1 a,
   .nav-footer2 a {
-  white-space: nowrap;
-}
+    white-space: nowrap;
+  }
 
 
   .social-media {
@@ -136,23 +143,20 @@ footer p{
 }
 
 @media (max-width: 720px) {
-  .mobile-nav-footer{
+  .mobile-nav-footer {
     flex-direction: column;
   }
 
-  .nav-footer1, .nav-footer2{
+  .nav-footer1,
+  .nav-footer2 {
     padding: 0;
     margin: 0;
     align-items: center;
     padding-top: 40px;
   }
 
-  .social-media{
+  .social-media {
     padding-top: 80px;
   }
 
 }
-
-
-
-
