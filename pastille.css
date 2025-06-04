@@ -59,7 +59,7 @@
 }
 
 .item1 .hover-img {
-  transform: translateX(-100%);
+  transform: translateX(-101%);
 }
 
 .item2 .hover-img {
@@ -90,7 +90,7 @@
   }
 
   .item1 .hover-img {
-    transform: translateX(-100%);
+    transform: translateX(-101%);
   }
 
   .item2 .hover-img {
@@ -98,7 +98,7 @@
   }
 
   .item3 .hover-img {
-    transform: translateX(-100%);
+    transform: translateX(-101%);
   }
 
   .item4 .hover-img {

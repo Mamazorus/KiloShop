@@ -148,8 +148,10 @@ header {
   display: none;
 }
 
-.nav-right a::after,
-.nav-right a:hover::after {
+.nav-right>a::after,
+.nav-right>a:hover::after,
+.dropdown a::after,
+.dropdown a:hover::after {
   display: none !important;
 }
 
@@ -306,6 +308,7 @@ header {
 }
 
 @media (max-width: 1400px) {
+
   .nav-left,
   .dropdown,
   .account-button {
@@ -313,19 +316,24 @@ header {
     padding: 0;
     margin: 0;
   }
+
   .burger-icon {
     opacity: 1;
     pointer-events: auto;
   }
+
   .nav-right {
     margin-right: 40px;
   }
+
   .navbar {
     height: 48px;
   }
+
   .logo-nav img {
     height: 30px;
   }
+
   .nav-center {
     position: relative;
     display: flex;
@@ -372,6 +380,9 @@ header {
   transform: translateY(-8px) translateX(-8px) rotate(-45deg);
 }
 
+
+
+
 .side-menu {
   position: fixed;
   top: 0;
@@ -382,7 +393,7 @@ header {
   border-left: 2px solid #101010;
   transition: right 0.3s ease;
   z-index: 1000;
-  padding: 80px 40px 40px 40px;
+  padding: 80px 40px 80px 40px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -418,14 +429,37 @@ header {
 
 .side-nav a {
   font-family: 'inter-regular', sans-serif;
-  align-items: center;
   position: relative;
   color: #101010;
   font-size: 20px;
   margin: 20px 0;
-  display: block;
+  display: inline-block;
+  /* Changé de 'block' à 'inline-block' */
+  text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
+
+.side-nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 1.7px;
+  background: #101010;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease-in-out;
+}
+
+.side-nav a:hover::after {
+  width: 100%;
+}
+
+.account-button2::after,
+.account-button2:hover::after {
+  display: none !important;
+}
+
+
 
 .side-menu.active {
   right: 0;
@@ -450,9 +484,7 @@ header {
   color: #101010;
   text-decoration: none;
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 50vh;
 }
 
 .account-icon2 {
@@ -477,6 +509,8 @@ header {
 .account-icon2 {
   overflow: visible;
 }
+
+
 
 .hero {
   background-color: #858585;
