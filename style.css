@@ -427,6 +427,25 @@ header {
   }
 }
 
+@media (max-width: 460px) {
+  .side-menu {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    width: 100vw;
+    height: 100vh;
+    background-color: #F1E8CA;
+    border-left: 2px solid #101010;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding: 80px 40px 40px 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
 .side-nav a {
   font-family: 'inter-regular', sans-serif;
   position: relative;
@@ -470,6 +489,7 @@ header {
 }
 
 .mascotte-logo-slider {
+  display: none;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -484,7 +504,6 @@ header {
   color: #101010;
   text-decoration: none;
   position: absolute;
-  top: 50vh;
 }
 
 .account-icon2 {
