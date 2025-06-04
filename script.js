@@ -25,7 +25,7 @@ burger.addEventListener('click', () => {
   sideMenu.classList.toggle('active');
 });
 
-document.addEventListener('click', function(event) {
+document.addEventListener('click', function (event) {
   const burger = document.querySelector('.burger-icon');
   const sideMenu = document.querySelector('.side-menu');
 

@@ -113,13 +113,11 @@ footer p {
   .nav-footer1 {
     margin-left: 40px;
     align-items: flex-start;
-    /* pour aligner les liens à droite si tu veux */
   }
 
   .nav-footer2 {
     margin-right: 40px;
     align-items: flex-end;
-    /* pour aligner les liens à droite si tu veux */
   }
 
   .nav-footer1 a,
