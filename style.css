@@ -62,6 +62,7 @@
   font-display: swap;
 }
 
+
 * {
   margin: 0;
   padding: 0;
@@ -202,7 +203,7 @@ header {
 
 .dropdown-menu {
   position: absolute;
-  background-color: #10101089;
+  background-color: #101010c6;
   border: none;
   top: 60px;
   left: 0px;
@@ -316,7 +317,7 @@ header {
 }
 
 .hero {
-  background-color: #858585;
+  background-color: #F1E8CA;
   height: 100px;
 }
 
@@ -344,7 +345,7 @@ header {
   }
 
   .hero {
-    background-color: #858585;
+    background-color: #F1E8CA;
     height: 48px;
   }
 
@@ -547,6 +548,34 @@ header {
   overflow: visible;
 }
 
+
+
+
+
+
+.fullwidth-video-section {
+  width: 100%;
+  padding: 0px 80px 80px 80px;
+  box-sizing: border-box;
+  background-color: #F1E8CA; /* ou transparent si tu préfères */
+}
+
+.fullwidth-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border: none;
+}
+
+@media (max-width: 1400px) {
+  .fullwidth-video-section {
+    width: 100%;
+    padding: 0px 0px 40px 0px;
+    box-sizing: border-box;
+    background-color: #F1E8CA; /* ou transparent si tu préfères */
+  }
+}
 
 
 
