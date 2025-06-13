@@ -624,8 +624,8 @@ header {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
   gap: 40px;
-  padding: 80px;
-  row-gap: 80px;
+  padding: 40px;
+  row-gap: 40px;
   background-color: #F1E8CA;
 }
 
@@ -634,7 +634,7 @@ header {
     font-family: 'inter-black';
     text-transform: uppercase;
     font-size: 52px;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     color: #101010;
     text-align: left;
   }
@@ -661,4 +661,26 @@ header {
   .kilo-img-1  { order: 1; }
   .kilo-img-2  { order: 3; }
   .kilo-text-2 { order: 4; }
+}
+
+@media (max-width: 460px) {
+  .kilo-text-1 h1,
+  .kilo-text-2 h2 {
+    font-family: 'inter-black';
+    text-transform: uppercase;
+    font-size: 38px;
+    margin-bottom: 20px;
+    color: #101010;
+    text-align: left;
+  }
+
+  .kilo-text-1 p,
+  .kilo-text-2 p {
+    font-family: 'inter-light';
+    font-size: 18px;
+    color: #101010;
+    line-height: 1.6;
+    text-align: left;
+  }
+
 }
