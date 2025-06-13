@@ -47,6 +47,14 @@
 }
 
 @font-face {
+  font-family: 'inter-black';
+  src: url('./fonts/Inter_18pt-Black.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'vina-sans';
   src: url('./fonts/VinaSans-Regular.ttf') format('truetype');
   font-weight: 400;
@@ -62,7 +70,7 @@
 
 body {
   margin: 0;
-  background: #ffffff
+  background: #F1E8CA;
 }
 
 header {
@@ -537,4 +545,120 @@ header {
 
 .account-icon2 {
   overflow: visible;
+}
+
+
+
+
+
+
+
+
+.kilo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 40px;
+  padding: 80px;
+  row-gap: 120px;
+  background-color: #F1E8CA;
+}
+
+
+
+.kilo-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.kilo-text-1,
+.kilo-text-2 {
+  align-items: flex-start;
+}
+
+.kilo-text-1 h1,
+.kilo-text-2 h2 {
+  font-family: 'inter-black';
+  text-transform: uppercase;
+  font-size: 64px;
+  margin-bottom: 16px;
+  color: #101010;
+  text-align: left;
+}
+
+.kilo-text-1 p,
+.kilo-text-2 p {
+  font-family: 'inter-light';
+  font-size: 24px;
+  color: #101010;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.kilo-img-1,
+.kilo-img-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kilo-img-1 img,
+.kilo-img-2 img {
+  max-width: 80%;
+  height: auto;
+  object-fit: contain;
+  border: none;
+}
+
+
+@media (max-width: 1400px) {
+  .kilo-grid {
+    padding: 40px;
+    row-gap: 40px;
+  }
+
+  
+.kilo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 40px;
+  padding: 80px;
+  row-gap: 80px;
+  background-color: #F1E8CA;
+}
+
+  .kilo-text-1 h1,
+  .kilo-text-2 h2 {
+    font-family: 'inter-black';
+    text-transform: uppercase;
+    font-size: 52px;
+    margin-bottom: 16px;
+    color: #101010;
+    text-align: left;
+  }
+
+  .kilo-text-1 p,
+  .kilo-text-2 p {
+    font-family: 'inter-light';
+    font-size: 20px;
+    color: #101010;
+    line-height: 1.6;
+    text-align: left;
+  }
+}
+
+@media (max-width: 1024px) {
+  .kilo-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 40px;
+    column-gap: 0;
+  }
+
+  .kilo-text-1 { order: 2; }
+  .kilo-img-1  { order: 1; }
+  .kilo-img-2  { order: 3; }
+  .kilo-text-2 { order: 4; }
 }

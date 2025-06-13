@@ -8,7 +8,7 @@
   aspect-ratio: 1728 / 574;
 }
 
-.grid-item {
+.grid-item2 {
   position: relative;
   border-left: 2px solid #101010;
   border-top: 2px solid #101010;
@@ -39,14 +39,14 @@
   transform: translateX(0);
 }
 
-.grid-item .icon {
+.grid-item2 .icon {
   position: relative;
   width: 80px;
   height: auto;
   z-index: 0;
 }
 
-.grid-item .hover-img {
+.grid-item2 .hover-img {
   position: absolute;
   top: 0;
   bottom: 0;
