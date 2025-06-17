@@ -167,14 +167,14 @@ const dropdownLangLinks = document.querySelectorAll('.dropdown-menu a');
 dropdownLangLinks.forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
-    
+
     const selectedLang = link.textContent.toLowerCase().includes('français') ? 'fr' : 'en';
 
     if (currentLang !== selectedLang) {
       currentLang = selectedLang;
       updateTexts(currentLang);
     }
-    
+
     // Optionnel : tu peux fermer la dropdown après sélection si tu as un système d'ouverture/fermeture
     // Par exemple si tu utilises une classe 'open' sur .dropdown pour afficher le menu
     // document.querySelector('.dropdown').classList.remove('open');
