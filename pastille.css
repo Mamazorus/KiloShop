@@ -82,6 +82,11 @@
   transition: transform 0.4s ease;
 }
 
+.item4 {
+  border-right: 2px solid #101010;
+}
+
+
 @media (max-width: 1024px) {
   .pastille {
     grid-template-columns: repeat(2, 1fr);
@@ -112,4 +117,13 @@
     transform: translateX(0);
     transition: transform 0.4s ease;
   }
+
+  .item3 {
+    border-left: 2px solid #101010;
+  }
+  .item2 {
+    border-right: 2px solid #101010;
+  }
+
+
 }

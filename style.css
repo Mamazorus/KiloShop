@@ -427,6 +427,10 @@ header {
   position: relative;
 }
 
+.langue-burger{
+  padding-top: 80px;
+}
+
 @media (max-width: 1024px) {
   .side-menu {
     position: fixed;
@@ -557,7 +561,7 @@ header {
   width: 100%;
   padding: 0px 80px 80px 80px;
   box-sizing: border-box;
-  background-color: #F1E8CA; /* ou transparent si tu préfères */
+  background-color: #F1E8CA; 
 }
 
 .fullwidth-video {
@@ -565,15 +569,16 @@ header {
   height: auto;
   display: block;
   object-fit: cover;
-  border: none;
+  border-top: 2px solid #101010; 
 }
+
 
 @media (max-width: 1400px) {
   .fullwidth-video-section {
     width: 100%;
     padding: 0px 0px 40px 0px;
     box-sizing: border-box;
-    background-color: #F1E8CA; /* ou transparent si tu préfères */
+    background-color: #F1E8CA; 
   }
 }
 
