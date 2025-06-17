@@ -69,6 +69,26 @@
   box-sizing: border-box;
 }
 
+header ::selection {
+  background: #F1E8CA;
+  color: #101010;
+}
+
+.side-nav a ::selection {
+  background: #101010;
+  color: #F1E8CA;
+}
+
+main ::selection {
+  background: #101010;
+  color: #F1E8CA;
+}
+
+footer ::selection {
+  background: #F1E8CA;
+  color: #101010;
+}
+
 body {
   margin: 0;
   background: #F1E8CA;
