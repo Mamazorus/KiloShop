@@ -181,3 +181,31 @@ dropdownLangLinks.forEach(link => {
   });
 });
 
+const imageElement = document.querySelector('.kilo-img-2 img');
+
+const img1 = 'SVG/mascotte_question_1.svg';
+const img2 = 'SVG/mascotte_question_2.svg'; // remplace par ton autre image
+
+let isOriginal = true;
+
+setInterval(() => {
+  imageElement.src = isOriginal ? img2 : img1;
+  isOriginal = !isOriginal;
+}, 800);
+
+
+const imageElement1 = document.querySelector('.kilo-img-1 img');
+
+const images = [
+  'SVG/mascotte_salut1.svg',
+  'SVG/mascotte_salut2.svg',
+  'SVG/mascotte_salut3.svg',
+  'SVG/mascotte_salut2.svg'
+];
+
+let currentIndex = 0;
+
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % images.length;
+  imageElement1.src = images[currentIndex];
+}, 100);
