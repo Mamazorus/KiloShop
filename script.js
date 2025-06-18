@@ -201,3 +201,22 @@ setInterval(() => {
   currentIndex = (currentIndex + 1) % images.length;
   imageElement1.src = images[currentIndex];
 }, 100);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const video = document.getElementById("videobottom");
+
+  if (window.innerWidth >= 768) {
+    const webmSource = document.createElement("source");
+    webmSource.src = "video/stopmotionkiloshop.webm";
+    webmSource.type = "video/webm";
+
+    const mp4Source = document.createElement("source");
+    mp4Source.src = "video/stopmotionkiloshop.mp4";
+    mp4Source.type = "video/mp4";
+
+    video.appendChild(webmSource);
+    video.appendChild(mp4Source);
+
+    video.load();
+  }
+});

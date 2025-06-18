@@ -591,6 +591,11 @@ header {
   border-top: 0px solid #101010;
 }
 
+.fullwidth-video {
+  min-height: 100px;
+}
+
+
 
 @media (max-width: 1400px) {
   .fullwidth-video-section {
