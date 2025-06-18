@@ -76,7 +76,7 @@ const translations = {
     heroTitle: 'One kilo,<br>what is it?',
     heroText: `A kilo of feathers still weighs a kilo, even if, between us, it’s better to wear a feather down than lead. Comfort and mobility matter.
     <br><br>It’s the same with clothes: some are light as air (hey silk dress), others heavier (hey jeans), but not all have the same value per kilo.`,
-    section2Title: 'So how does it work?',
+    section2Title: 'So how does<br>it work?',
     section2Text: `At Kilo Shop, each item has a colored tag. That tag shows the price per kilo based on the material. Then we weigh the garment, and voilà — that’s your final price.
     <br><br>With men’s and women’s pieces from the 70s to today, from all over the world — jeans, dresses, sneakers, sweatshirts, coats, bags, kimonos, bombers, bucket hats — and weekly restocks, there’s always a hidden gem to discover.
     <br><br>Roughly, 1 kilo at Kilo Shop means 3 to 6 super stylish pieces in your bag.`,
@@ -114,7 +114,6 @@ function updateTexts(lang) {
     link.textContent = t.navItems[index];
   });
 
-  // Burger menu nav
   const burgerLinks = document.querySelectorAll('.side-nav a');
   burgerLinks[0].textContent = t.navItems[0];
   burgerLinks[1].textContent = t.navItems[1];
@@ -123,18 +122,14 @@ function updateTexts(lang) {
   burgerLinks[4].textContent = t.langToggle;
   burgerLinks[5].lastChild.textContent = t.accountBtn;
 
-  // Hero section
   document.querySelector('.kilo-text-1 h1').innerHTML = t.heroTitle;
   document.querySelector('.kilo-text-1 p').innerHTML = t.heroText;
 
-  // Section 2
-  document.querySelector('.kilo-text-2 h2').textContent = t.section2Title;
+  document.querySelector('.kilo-text-2 h2').innerHTML = t.section2Title;
   document.querySelector('.kilo-text-2 p').innerHTML = t.section2Text;
 
-  // Footer
   document.querySelector('.footer-lastline p').textContent = t.footerText;
 
-  // Account button & language button in navbar
   document.querySelector('.account-button').lastChild.textContent = t.accountBtn;
   document.querySelector('.lang-button').lastChild.textContent = t.langBtn;
 
@@ -155,13 +150,13 @@ function toggleLanguage() {
   updateTexts(currentLang);
 }
 
-// Bouton langue burger
+
 document.querySelector('.langue-burger').addEventListener('click', (e) => {
   e.preventDefault();
   toggleLanguage();
 });
 
-// Sélectionne tous les liens dans la dropdown menu langue
+
 const dropdownLangLinks = document.querySelectorAll('.dropdown-menu a');
 
 dropdownLangLinks.forEach(link => {
@@ -175,16 +170,13 @@ dropdownLangLinks.forEach(link => {
       updateTexts(currentLang);
     }
 
-    // Optionnel : tu peux fermer la dropdown après sélection si tu as un système d'ouverture/fermeture
-    // Par exemple si tu utilises une classe 'open' sur .dropdown pour afficher le menu
-    // document.querySelector('.dropdown').classList.remove('open');
   });
 });
 
 const imageElement = document.querySelector('.kilo-img-2 img');
 
 const img1 = 'SVG/mascotte_question_1.svg';
-const img2 = 'SVG/mascotte_question_2.svg'; // remplace par ton autre image
+const img2 = 'SVG/mascotte_question_2.svg'; 
 
 let isOriginal = true;
 
